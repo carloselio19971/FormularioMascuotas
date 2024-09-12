@@ -1,0 +1,119 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.header{
+    background-color:v.$fondo;
+    padding-top: 2rem;
+    
+    &__logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo img{
+        height: 10rem;
+        width: 10rem;
+    }
+
+    &__menu ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:3rem;
+        font-size: 3rem;
+        font-weight: bold;
+
+        @include m.tablet { 
+            flex-direction:column;
+            font-size: 2rem;
+        }
+        @include m.desktop { 
+            flex-direction:row;
+            font-size: 3rem;
+           
+        }
+    }
+    &__botones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:3rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+       
+        @include m.tablet { 
+            gap:2rem;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        @include m.desktop { 
+              flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+    &__boton{
+            img {
+                width: 6rem;
+                height: 6rem;
+
+                @include m.tablet { 
+                    width: 4rem;
+                    height: 4rem;
+                
+                }
+            }
+
+
+
+    }
+
+    &__telefono{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        gap:2rem;
+
+        @include m.desktop { 
+            flex-direction: row;
+        }
+
+        img{
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    &__grid{
+        @include m.tablet { 
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:3rem;
+        }
+
+        @include m.desktop { 
+            grid-template-columns: repeat(5,1fr);
+            gap:3rem;
+        }
+       
+     }
+   &__telefono{
+    @include m.desktop { 
+        grid-column:5/6;   
+    }
+   }
+
+   &__botones{
+    @include m.desktop { 
+        grid-column:4/5;   
+    }
+   }
+}
+
+
+
