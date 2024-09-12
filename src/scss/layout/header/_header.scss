@@ -3,6 +3,8 @@
 .header{
     background-color:v.$fondo;
     padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid red;
     
     &__logo{
         display: flex;
