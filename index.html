@@ -45,65 +45,81 @@
         <div class="registro__contenedor">
             <div class="registro__grid">
                 <div class="registro__formularios">
-                    <div class="registro__formulario--dueño">
+                    <div class="registro__formulario">
                         <form>
                             <fieldset>
                                 <legend>Información del Dueño</legend>
-                                <label for="nombrePropietario">Nombre completo:</label>
-                                <input type="text" id="nombrePropietario" name="nombrePropietario" required><br><br>
-                                <label for="email">Correo electrónico:</label>
-                                <input type="email" id="email" name="email" required><br><br>
-                                <label for="telefono">Número de teléfono:</label>
-                                <input type="tel" id="telefono" name="telefono" required><br><br>
-                                <label for="direccion">Dirección:</label>
-                                <input type="text" id="direccion" name="direccion" required><br><br>
-                            </fieldset>
-                           
-                            <input type="submit" value="Registrar Dueño">
-                        </form>
-                    </div>
-                    <div class="registro__formulario--mascota">
-                        <form action="/enviar-mascota" method="post">
+                                <div class="registro__nombreDueño">
+                                    <label for="nombrePropietario">Nombre completo:</label>
+                                    <input type="text" id="nombrePropietario" name="nombrePropietario" required>
+                                </div>
+                                <div class="registro__correo">
+                                    <label for="email">Correo electrónico:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="registro__telefono">
+                                    <label for="telefono">Número de teléfono:</label>
+                                    <input type="tel" id="telefono" name="telefono" required>
+                                </div>
+                                <div class="registro__direccion">
+                                    <label for="direccion">Dirección:</label>
+                                    <input type="text" id="direccion" name="direccion" required>
+                                </div>                
+                            </fieldset>       
                             <fieldset>
                                 <legend>Información del Mascotas</legend>
-                                <label for="nombreMascota">Nombre de la mascota:</label>
-                                <input type="text" id="nombreMascota" name="nombreMascota" required><br><br>
-                        
-                                <label for="especie">Especie:</label>
-                                <select id="especie" name="especie" required>
-                                    <option value="perro">Perro</option>
-                                    <option value="gato">Gato</option>
-                                    <option value="otro">Otro</option>
-                                </select><br><br>
-                        
-                                <label for="raza">Raza:</label>
-                                <input type="text" id="raza" name="raza" required><br><br>
-                        
-                                <label for="edad">Edad (en años):</label>
-                                <input type="number" id="edad" name="edad" min="0" required><br><br>
-                        
-                                <label for="sexo">Sexo:</label>
-                                <input type="radio" id="macho" name="sexo" value="macho" required>
-                                <label for="macho">Macho</label>
-                                <input type="radio" id="hembra" name="sexo" value="hembra" required>
-                                <label for="hembra">Hembra</label><br><br>
-                        
-                                <label for="peso">Peso (kg):</label>
-                                <input type="number" id="peso" name="peso" step="0.1" required><br><br>
-                        
-                                <label for="colorPelaje">Color del pelaje:</label>
-                                <input type="text" id="colorPelaje" name="colorPelaje" required><br><br>
-                        
-                                <label for="historialMedico">Historial médico:</label>
-                                <textarea id="historialMedico" name="historialMedico" rows="4" cols="50" placeholder="Vacunas, enfermedades previas, alergias, etc." required></textarea><br><br>
-                        
-                                <label for="fotoMascota">Foto de la mascota (opcional):</label>
-                                <input type="file" id="fotoMascota" name="fotoMascota" accept="image/*"><br><br>
+                                <div class="registro__nombreMascota">
+                                    <label for="nombreMascota">Nombre de la mascota:</label>
+                                    <input type="text" id="nombreMascota" name="nombreMascota" required>
+                                </div>
+                                <div class="registro__especie">
+                                    <label for="especie">Especie:</label>
+                                    <select id="especie" name="especie" required>
+                                        <option value="perro">Perro</option>
+                                        <option value="gato">Gato</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="registro__raza">
+                                    <label for="raza">Raza:</label>
+                                    <input type="text" id="raza" name="raza" required>    
+                                </div>
+                                <div class="registro__edad">
+                                    <label for="edad">Edad (en años):</label>
+                                    <input type="number" id="edad" name="edad" min="0" required>
+                            
+                                </div>
+                                <div class="registro__sexo">
+                                    <label for="sexo">Sexo:</label>
+                                    <div class="radio-contenedor">
+                                        <input type="radio" id="macho" name="sexo" value="macho" required>
+                                        <label for="macho">Macho</label>
+                                        <input type="radio" id="hembra" name="sexo" value="hembra" required>
+                                        <label for="hembra">Hembra</label>
+                                    </div>
+                                   
+                                </div>
+                                <div class="registro__peso">
+                                    <label for="peso">Peso (kg):</label>
+                                    <input type="number" id="peso" name="peso" step="0.1" required>
+                                </div>
+                                <div class="registro__colorPelo">
+                                    <label for="colorPelaje">Color del pelaje:</label>
+                                    <input type="text" id="colorPelaje" name="colorPelaje" required>
+                                </div>
+                                <div class="registro__historialMedico">
+                                    <label for="historialMedico">Historial médico:</label>
+                                    <textarea id="historialMedico" name="historialMedico" rows="4" cols="50" placeholder="Vacunas, enfermedades previas, alergias, etc." required></textarea>   
+                                </div>
+                                <div class="registro__fotoMascota">
+                                    <label for="fotoMascota">Foto de la mascota (opcional):</label>
+                                    <input type="file" id="fotoMascota" name="fotoMascota" accept="image/*">
+                                </div>
+                               
                             </fieldset>
-                            <input type="submit" value="Registrar Mascota">
+                        <input class="registro__boton" type="submit" value="Registrar">
                         </form>
                     </div>
-                    
                 </div>
                 <div class="registro__imagen">
                     <img src="dist/img/perrito.jpg">

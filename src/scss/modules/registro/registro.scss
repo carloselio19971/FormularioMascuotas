@@ -10,6 +10,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 
     @include m.tablet { 
         display: grid;
@@ -28,56 +30,91 @@
 
     &__formularios{
         grid-column: 1/4;
-    }
     
+        form{
+            background-color: v.$formulario;
+            display:grid;
+            grid-template-columns: 1fr;
+            width:100%;
+            margin: 0 auto;
+            border-radius: 3rem;
+            
+            @include m.tablet { 
+                width:90%;
+                margin: 0 auto;
+                
+            }
 
-    &__formulario--dueño , &__formulario--mascota{
-        background-color: v.$formulario;
-        color:v.$blanco;
-    }
 
-    &__formularios{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap:5rem;
-        margin-bottom: 5rem;
+            fieldset{
+                border: 5px solid v.$colorHeader;
+                margin: 3rem;
+                padding: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: space-between ;
+                gap:2rem;
+                legend{
+                    background-color: v.$colorHeader;
+                    font-size: 1.5rem;
+                    height: 5rem;
+                    width: 20rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+
+                    @include m.tablet { 
+                        height: 5rem;
+                        width: 30rem;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
 
         
-        @include m.desktop { 
-            flex-direction: row;
-        }
     }
 
-    &__formulario--dueño , &__formulario--mascota{
-            width: 70%;
-            align-self: center;
-        @include m.tablet { 
-            align-self:  center;
-        }
-
-        @include m.desktop { 
-            align-self: flex-start;
-        }
-    }
-
-    &__formularios fieldset {
-                text-align: center;
-                padding-top: 5rem;
-                border: 5px solid v.$colorHeader;
-        legend{
-            color:v.$negro;
-            background-color: v.$colorHeader;
-            height: 5rem;
-            width: 20rem;
-            border: 1px solid v.$negro;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-       
-    }
-
+    &__nombreDueño ,   &__correo ,  &__telefono, &__direccion,     &__nombreMascota ,  &__especie, &__raza, &__edad,  &__sexo, &__peso,   &__colorPelo,   &__historialMedico ,   &__fotoMascota{
+        color:white;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:1rem;
+        font-weight: bold;
+        font-size: 2rem;
     
+        
+      @include m.tablet {          
+        grid-template-columns: repeat(2,1fr);
+        font-size: 2rem;
+        };
+
+        @include m.desktop { 
+            font-size: 3rem;
+        }
+    }
+    
+    &__boton{
+        background-color: v.$colorHeader;
+        width: 50%;
+        height: 5rem;
+        border-radius: 2rem;
+        font-size: 3rem;
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}   
+
+.radio-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input{
+        width: 3rem;
+        height: 3rem;
+    
+    }
+    font-size: 3rem;
 }
