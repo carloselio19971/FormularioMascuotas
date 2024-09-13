@@ -116,5 +116,12 @@
         height: 3rem;
     
     }
-    font-size: 3rem;
+
+
+    @include m.tablet { 
+        font-size: 2rem;
+    }
+    @include m.desktop { 
+        font-size: 3rem;
+    }
 }
